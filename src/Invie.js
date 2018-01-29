@@ -9,6 +9,16 @@ import logoPortada from './images/invie.png'
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
 
+import cheeet from 'cheet.js'
+
+cheeet('i n v i e', ()=>{
+  console.log('lo lograste, descubriste el easter egg');
+})
+
+cheeet('g o b a c k', ()=>{
+  console.log('regresaste al estado inicial');
+})
+
 const data = {
   menu : [
     {
