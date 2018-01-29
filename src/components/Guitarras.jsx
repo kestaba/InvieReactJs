@@ -38,16 +38,23 @@ class Guitarras extends Component{
                                         width="350"
                                     />
                                 </CSSTransitionGroup >
-                                <div className="contenedor-guitarra-a">
-                                    <h3 className="guitarra-title">{guitarra.name}</h3>
-                                    <ol>
-                                        {guitarra.features.map((feature, index)=>{
-                                            return(
-                                                <li key={index}>{feature}</li>
-                                            )
-                                        })}
-                                    </ol>
-                                </div>
+
+                                <CSSTransitionGroup
+                                    transitionName = "fade"                                    
+                                    transitionEnterTimeout={300}
+                                    transitionLeave={false}
+                                >
+                                    <div className="contenedor-guitarra-a">
+                                        <h3 className="guitarra-title">{guitarra.name}</h3>
+                                        <ol>
+                                            {guitarra.features.map((feature, index)=>{
+                                                return(
+                                                    <li key={index}>{feature}</li>
+                                                )
+                                            })}
+                                        </ol>
+                                    </div>
+                                </CSSTransitionGroup >
                             </article>
                         )
                     })
