@@ -7,6 +7,8 @@ import cheet from 'cheet.js'
 import logoPortada from './images/invie.png'
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
+import easteA from './images/easter-a.png';
+import easteB from './images/easter-b.png';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
@@ -64,7 +66,29 @@ const easter = {
             href: 'index.html',
             title: 'Home'
         }
-    ]
+    ],
+    guitarras : [
+        {
+            image: easteA,
+            alt: 'Guitarra Invie Padre de familia',
+            name: 'Invie Padre de familia',
+            features: [
+                'Lista para copiar a los Simpsons',
+                'Aire puro',
+                'Chistes malos'
+            ]
+        },
+        {
+          image: easteB,
+          alt: 'Guitarra Invie Anime',
+          name: 'Invie Anime',
+          features: [
+              'Estilo vintage',
+              'Liviana',
+              'Empieza tu camino como rockstar'
+          ]
+      }
+    ]  
 }
 
 cheet('i n v i e', ()=>{
@@ -74,11 +98,11 @@ cheet('i n v i e', ()=>{
         props: easter
        }
     })
-  //console.log('lo lograste, descubriste el easter egg');
+  console.log('lo lograste, descubriste el easter egg');
 })
 
 cheet('g o b a c k', ()=>{
-  //console.log('regresaste al estado inicial');
+  console.log('regresaste al estado inicial');
   store.dispatch({
     type: 'UPDATE_PROPS',
     payload: {
