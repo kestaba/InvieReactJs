@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+
+function mapStateToProps(state){
+    return {
+        guitarras: state.guitarras
+    }
+}
+
 class Guitarras extends Component{
     render(){
         return(
@@ -37,4 +45,4 @@ class Guitarras extends Component{
     }
 }
 
-export default Guitarras;
+export default connect(mapStateToProps) (Guitarras);
